@@ -16,6 +16,7 @@ let cart = []
 
     export function addToCart(productId) {
     cart.push(productId);
+    // push other details too
 }
 
     export function removeFromCart(productId) {
