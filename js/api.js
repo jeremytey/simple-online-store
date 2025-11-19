@@ -1,5 +1,13 @@
 // api.js — (API calls and data fetching)
 
-async function fetchProducts():
-    simulate fetch with timeout
-    return hardcoded product array
+    export async function fetchProducts() {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve([
+                { id: 1, name: "Product A", description: "Description of Product A", price: 29.99 },
+                { id: 2, name: "Product B", description: "Description of Product B", price: 49.99 },
+                { id: 3, name: "Product C", description: "Description of Product C", price: 19.99 }
+            ]);
+        }, 500); reject("Failed to fetch products");
+    });
+}

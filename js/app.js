@@ -4,3 +4,5 @@ on DOMContentLoaded:
     initialize router
     attach cart button listener
     render the initial view (products grid)
+
+
