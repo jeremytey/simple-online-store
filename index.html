@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shop SPA</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Online Store</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
 
-  <!-- Navbar -->
-  <header class="nav">
-    <h1>My Shop</h1>
-    <button id="cartBtn">Cart (<span id="cartCount"> 0 </span>)</button>
+<body>
+  <!-- ===== Global Header (Cart always visible) ===== -->
+  <header id="mainHeader">
+    <h2>Simple Online Store</h2>
+    <button id="btnCart" class="cart-btn">Cart (<span id="cartCount">0</span>)</button>
   </header>
 
-  <!-- Views -->
-  <main id="viewRoot"></main>
+  <!-- ================== VIEWS ================== -->
 
-  <!-- Cart Modal -->
-  <div id="cartModal" class="modal hidden">
-    <div class="modal-content">
-      <button id="closeCart" class="close">&times;</button>
-      <h2>Your Cart</h2>
-      <div id="cartList"></div>
-      <button id="checkoutBtn" class="checkout">Checkout</button>
+  <!-- ===== Landing Page ===== -->
+  <section id="landingView" class="view">
+    <div class="center-box">
+      <h1>Welcome to Our Store</h1>
+      <button id="btnViewProducts" class="primary-btn">View Products</button>
     </div>
-  </div>
+  </section>
 
+  <!-- ===== Products Page ===== -->
+  <section id="productsView" class="view hidden">
+    <h2>Products</h2>
+    <div id="productsContainer" class="grid"></div>
+  </section>
+
+  <!-- ===== Product Details Page ===== -->
+  <section id="detailsView" class="view hidden">
+    <button id="btnBackToProducts" class="link-btn">← Back to Products</button>
+    <div id="detailsContainer"></div>
+  </section>
+
+  <!-- ===== Cart Page ===== -->
+  <section id="cartView" class="view hidden">
+    <h2>Your Cart</h2>
+    <div id="cartContainer"></div>
+
+    <div id="cartSummary" class="summary-box">
+      <p>Total: RM <span id="cartTotal">0.00</span></p>
+      <button id="btnPlaceOrder" class="primary-btn">Place Order</button>
+      <button id="btnCancelOrder" class="secondary-btn">Cancel Order</button>
+      <button id="btnCartSeeProducts" class="link-btn">See More Products</button>
+    </div>
+  </section>
+
+  <!-- ========== JS ENTRY ========== -->
   <script type="module" src="js/app.js"></script>
 </body>
 </html>

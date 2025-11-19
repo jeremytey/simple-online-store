@@ -12,3 +12,4 @@ function renderDetails(id):
 
 function attachProductCardEvents():
     on click of product card -> router.showProductDetails()
+
