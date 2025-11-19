@@ -1,19 +1,29 @@
 // state.js — (Application state: cart + products)
-
 let products = []
 let cart = []
 
-function setProducts(list):
-    products = list
+    export function setProducts(list) {
+    products = list;
+}
 
-function getProducts():
-    return products
+    export function getProductById(id){
+    return products.find(p => p.id === id)
+    };
+   
+    export function getProducts() {
+    return products;
+}
 
-function addToCart(productId):
-    push productId to cart
+    export function addToCart(productId) {
+    cart.push(productId);
+}
 
-function removeFromCart(productId):
-    remove first match
-
-function getCartCount():
-    return cart.length
+    export function removeFromCart(productId) {
+    const index = cart.indexOf(productId);
+    if (index > -1) {
+        cart.splice(index, 1);
+    }
+}
+    export function getCartCount() {
+    return cart.length;
+}
