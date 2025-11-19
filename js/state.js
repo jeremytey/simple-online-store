@@ -28,3 +28,6 @@ let cart = []
     export function getCartCount() {
     return cart.length;
 }
+    export function getCartItems() {
+    return cart.map(id => getProductById(id));
+}
