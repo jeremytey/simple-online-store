@@ -1,7 +1,5 @@
 # Simple Online Store
 
-!
-
 A Tier 2-Intermediate project focused on building a functional front-end for a basic e-commerce application. This project emphasizes mastering core JavaScript concepts like **state management**, **dynamic rendering**, and **data processing** to simulate a real-world shopping experience.
 
 ---
@@ -28,7 +26,7 @@ The primary goal is to allow users to **view products**, **add/remove items from
 
 This project is an excellent exercise in mastering core JavaScript concepts essential for building interactive web applications.
 
-### 1. State Management: The Shopping Cart 🛒
+### 1. State Management: The Shopping Cart 
 
 The application's dynamic behavior is driven by two primary states managed using JavaScript arrays and objects:
 
