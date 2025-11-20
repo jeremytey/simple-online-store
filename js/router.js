@@ -1,10 +1,25 @@
 // router.js — (SPA View switching) Single Pape Application
 
 function showProductsView():
-    call products.renderList()
+    navigate("products")
 
 function showProductDetails(id):
-    call products.renderDetails(id)
+    navigate("details", { id })
 
 function navigate(viewName, data):
-    decide which view to load based on arguments
+    hide all views
+
+    if viewName == "landing":
+        show landingView
+
+    if viewName == "products":
+        show productsView
+        products.renderList()
+
+    if viewName == "details":
+        show detailsView
+        products.renderDetails(data.id)
+
+    if viewName == "cart":
+        show cartView
+        cart.openCartModal()
