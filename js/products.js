@@ -1,6 +1,6 @@
 //products.js — (Render product list and details)
 
-function renderList() {
+export function renderList() {
     const products = getProducts();
     const productsContainer = document.querySelector('#productsContainer');
     productsContainer.innerHTML = products.map(product => `
@@ -11,7 +11,7 @@ function renderList() {
     `).join('');
 }   
 
-function renderDetails(id) {
+export function renderDetails(id) {
     const product = getProductById(id);
     const productDetailsContainer = document.querySelector('#detailsContainer');
     productDetailsContainer.innerHTML = `

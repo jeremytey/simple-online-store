@@ -30,7 +30,6 @@ function attachCartEvents() {
             const productId = item.getAttribute('data-id');
             removeFromCart(productId);
             renderCartList();
-
         }
     });
 
