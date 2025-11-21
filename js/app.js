@@ -11,7 +11,7 @@ function setupGlobalEvents() {
     const btnCartSeeProducts = document.querySelector('#btnCartSeeProducts');
 
     btnViewProducts.addEventListener('click', () => router.navigate("products"));
-    btnCart.addEventListener('click', openCartModal);
+    btnCart.addEventListener('click', () => router.navigate("cart"));
     btnBackToProducts.addEventListener('click', () => router.navigate("products"));
     btnCartSeeProducts.addEventListener('click', () => router.navigate("products"));
 }
