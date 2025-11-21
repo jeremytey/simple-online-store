@@ -1,4 +1,9 @@
 //app.js — (Main entry point)
+import { fetchProducts } from './api.js';
+import * as state from './state.js';
+import * as router from './router.js';
+import * as cart from './cart.js';
+
 on DOMContentLoaded:
     load products from API
     initialize router
@@ -12,3 +17,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     cartBtn.addEventListener('click', () => {
         cart.openCartModal();
     });
+
+});

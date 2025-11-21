@@ -1,7 +1,6 @@
 // router.js — (SPA View switching) Single Pape Application
 import * as products from './products.js';
-import * as cart from './cart.js';
-
+import { openCartModal } from './cart.js';
     function hideAll() {
         const views = document.querySelectorAll('.view');
         views.forEach(view => view.classList.add('hidden'));
@@ -27,6 +26,6 @@ import * as cart from './cart.js';
         document.querySelector('#detailsView').classList.remove('hidden');
         products.renderDetails(data.id);
     } else if (viewName === "cart") {
-        cart.openCartModal();
+        openCartModal();
     }
     }

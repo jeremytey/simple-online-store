@@ -1,7 +1,7 @@
 // cart.js — (Render and manage shopping cart)
 import { getCartItems, removeFromCart } from './state.js';
 
-function openCartModal() {
+export function openCartModal() {
     const cartModal = document.querySelector('#cartView');
     cartModal.classList.remove('hidden');
     renderCartList();
