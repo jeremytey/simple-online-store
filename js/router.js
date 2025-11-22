@@ -27,6 +27,7 @@ import { openCartModal } from './cart.js';
         document.querySelector('#detailsView').classList.remove('hidden');
         products.renderDetails(data.id);
     } else if (viewName === "cart") {
-        openCartModal();
+       document.querySelector('#cartView').classList.remove('hidden');
+         renderCartList();
     }
     }

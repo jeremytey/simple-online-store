@@ -1,4 +1,6 @@
 //products.js — (Render product list and details)
+import { getProducts, getProductById } from './state.js';
+import * as router from './router.js';
 
 export function renderList() {
     const products = getProducts();
@@ -9,6 +11,7 @@ export function renderList() {
             <p>Price: $${product.price}</p>
         </div>
     `).join('');
+    attachProductCardEvents();
 }   
 
 export function renderDetails(id) {
@@ -23,8 +26,8 @@ export function renderDetails(id) {
         </div>
     `;
 }
-
-function attachProductCardEvents() {
+// Attach event listeners to product cards for navigation to details
+export function attachProductCardEvents() {
     const productCards = document.querySelector('#productsContainer');
 
     productCards.addEventListener('click', (event) => {

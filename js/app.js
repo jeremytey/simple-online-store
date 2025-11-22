@@ -1,7 +1,6 @@
 //app.js — (Main entry point)
 import { fetchProducts } from './api.js';
 import * as router from './router.js';
-import { openCartModal } from './cart.js';
 import  { setProducts } from './products.js';
 
 function setupGlobalEvents() {
@@ -17,11 +16,10 @@ function setupGlobalEvents() {
 }
 
 
-function initializeApp(){
-    fetchProducts().then(list => {
-        setProducts(list);
+async function initializeApp(){
+    const productsData = await fetchProducts();
+    setProducts(productsData);
         router.navigate("landing");
-    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
