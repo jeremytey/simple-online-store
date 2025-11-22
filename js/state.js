@@ -15,8 +15,10 @@ let cart = []
 }
 
     export function addToCart(productId) {
-    cart.push(productId);
-    // push other details too
+    const product = getProductById(productId);
+    if (product) {
+        cart.push(product);
+    }
 }
 
     export function removeFromCart(productId) {
@@ -29,5 +31,5 @@ let cart = []
     return cart.length;
 }
     export function getCartItems() {
-    return cart.map(id => getProductById(id));
+    return cart;
 }

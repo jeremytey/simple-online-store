@@ -1,5 +1,5 @@
 //products.js — (Render product list and details)
-import { getProducts, getProductById } from './state.js';
+import { getProducts, getProductById, addToCart, getCartCount } from './state.js';
 import * as router from './router.js';
 
 export function renderList() {
@@ -23,8 +23,30 @@ export function renderDetails(id) {
             <h2>${product.name}</h2>
             <p>${product.description}</p>
             <p>Price: $${product.price}</p>
+            <button id="btnAddToCart" class="primary-btn" data-product-id="${product.id}">
+                Add to Cart
+            </button>
         </div>
     `;
+    attachAddToCartEvent();
+}
+
+function attachAddToCartEvent() {
+    const btnAddToCart = document.querySelector('#btnAddToCart');
+    if (btnAddToCart) {
+        btnAddToCart.addEventListener('click', () => {
+            const productId = btnAddToCart.getAttribute('data-product-id');
+            addToCart(productId);
+            updateCartCount();
+        });
+    }
+}
+
+function updateCartCount() {
+    const cartCount = document.querySelector('#cartCount');
+    if (cartCount) {
+        cartCount.textContent = getCartCount();
+    }
 }
 // Attach event listeners to product cards for navigation to details
 export function attachProductCardEvents() {

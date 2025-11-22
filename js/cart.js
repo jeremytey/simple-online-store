@@ -1,5 +1,5 @@
 // cart.js — (Render and manage shopping cart)
-import { getCartItems, removeFromCart } from './state.js';
+import { getCartItems, removeFromCart, addToCart } from './state.js';
 
 export function openCartModal() {
     const cartModal = document.querySelector('#cartView');
@@ -19,6 +19,12 @@ export function renderCartList() {
     `).join('');
     attachCartEvents();
 }
+
+export function pushToCart(productId) {
+    // This function can be implemented to add items to the cart
+}
+
+
 
 // Attach event listeners to cart items for removal and checkout
 function attachCartEvents() {
