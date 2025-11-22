@@ -7,7 +7,7 @@ let cart = []
 }
 
     export function getProductById(id){
-    return products.find(p => p.id === id)
+    return products.find(p => p.id == id)
     };
    
     export function getProducts() {

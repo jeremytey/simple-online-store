@@ -8,8 +8,10 @@ function setupGlobalEvents() {
     const btnCart = document.querySelector('#btnCart');
     const btnBackToProducts = document.querySelector('#btnBackToProducts');
     const btnCartSeeProducts = document.querySelector('#btnCartSeeProducts');
+    const btnBackToProducts2 = document.querySelector('#btnCancelOrder');
 
     btnViewProducts.addEventListener('click', () => router.navigate("products"));
+    btnBackToProducts2.addEventListener('click', () => router.navigate("backModal"));
     btnCart.addEventListener('click', () => router.navigate("cart"));
     btnBackToProducts.addEventListener('click', () => router.navigate("products"));
     btnCartSeeProducts.addEventListener('click', () => router.navigate("products"));

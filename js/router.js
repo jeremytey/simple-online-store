@@ -29,5 +29,7 @@ import { openCartModal } from './cart.js';
     } else if (viewName === "cart") {
        document.querySelector('#cartView').classList.remove('hidden');
          openCartModal();
+    } else if (viewName === "backModal") {
+        document.querySelector('#landingView').classList.remove('hidden');
     }
-    }
+}
