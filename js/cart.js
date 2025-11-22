@@ -5,10 +5,9 @@ export function openCartModal() {
     const cartModal = document.querySelector('#cartView');
     cartModal.classList.remove('hidden');
     renderCartList();
-    attachCartEvents();
 }
 
-function renderCartList() {
+export function renderCartList() {
     const cartContainer = document.querySelector('#cartContainer')
     const cartItems = getCartItems(); 
     cartContainer.innerHTML = cartItems.map(item => `
@@ -18,9 +17,10 @@ function renderCartList() {
             <button class="btnRemove">Remove</button>
         </div>
     `).join('');
+    attachCartEvents();
 }
 
-
+// Attach event listeners to cart items for removal and checkout
 function attachCartEvents() {
     const cartContainer = document.querySelector('#cartContainer');
 

@@ -1,7 +1,7 @@
 // api.js — (API calls and data fetching)
 
     export async function fetchProducts() {
-    return new Promise((resolve,reject) => {
+    return new Promise((resolve) => {
         setTimeout(() => {
             resolve([
                 { id: 1, name: "Product A", description: "Description of Product A", price: 29.99 },
