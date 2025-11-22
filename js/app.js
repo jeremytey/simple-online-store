@@ -1,7 +1,7 @@
 //app.js — (Main entry point)
 import { fetchProducts } from './api.js';
 import * as router from './router.js';
-import  { setProducts } from './products.js';
+import  { setProducts } from './state.js';
 
 function setupGlobalEvents() {
     const btnViewProducts = document.querySelector('#btnViewProducts');
@@ -26,3 +26,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeApp();
     setupGlobalEvents();
 });
+
+
